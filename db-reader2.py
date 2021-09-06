@@ -6,8 +6,6 @@ from openpyxl import *
 user = ""# Add your username between the
 passw = ""# Add your password between the
 
-
-##print("\nNote that ASSAY tables may take a while to load.\n")
 tables = ["1. A_DH_ASSAY_NUM", "2. A_DH_ASSAY_NUM_CACHED", "3. A_DH_ASSAY_NUM_NAME",
           "4. A_DH_ASSAY_NUM_NAME_CACHED", "5. A_DH_ASSAY_NUM_TOT",
           "6. A_DH_ASSAY_NUM_TOT_CACHED", "7. A_DH_ASSAY_SEL_NUM", "8. A_DH_ASSAY_SEL_NUM_CACHED",
@@ -16,8 +14,6 @@ tables = ["1. A_DH_ASSAY_NUM", "2. A_DH_ASSAY_NUM_CACHED", "3. A_DH_ASSAY_NUM_NA
           "15. A_DH_BULKDENS_NUM", "16. A_DH_COLLAR", "17. A_DH_DIAMETER", "18. A_DH_GEOLOGY", "19. A_DH_GEOTECH",
           "20. A_DH_MAGSUSC", "21. A_DH_RECOVERY", "22. A_DH_STRUCTURE", "23. A_DH_SURVEY", "24. A_DS_RETURN",
           "25. A_DS_SEND"]
-
-##print(*tables, sep = "\n")
 
 def save_to_file():     
     
@@ -66,12 +62,10 @@ def get_db_ddh():
     return df
 
 if not user:
-##    print("No username found.\n")
     user = input("Username: ")
 else:
     pass
 if not passw:
-##    print("No password found.\n")
     passw = input("Password: ")
 
 print(*tables, sep = "\n")
