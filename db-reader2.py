@@ -3,8 +3,8 @@ import pyodbc
 import os
 from openpyxl import *
 
-user = ""# Add your username between the "" to avoid entering it every time.
-passw = ""# Add your password between the "" to avoid entering it every time. Password will be visible to anybody opening the file.
+user = ""# Add your username between the
+passw = ""# Add your password between the
 
 
 ##print("\nNote that ASSAY tables may take a while to load.\n")
@@ -44,7 +44,7 @@ def get_db_no_ddh():
     global df
     
     cnxn = pyodbc.connect(r"Driver={SQL Server Native Client 11.0};"
-                          "Server=odbc.novapartner.com.au;"
+                          "Server=;" # Add server here
                           "Database=acQ_Copperstone;"
                           "uid={%s};pwd={%s}" % (user, passw))
 
@@ -57,7 +57,7 @@ def get_db_ddh():
     global df
     
     cnxn = pyodbc.connect(r"Driver={SQL Server Native Client 11.0};"
-                          "Server=odbc.novapartner.com.au;"
+                          "Server=;" # Add server here
                           "Database=acQ_Copperstone;"
                           "uid={%s};pwd={%s}" % (user, passw))
 
